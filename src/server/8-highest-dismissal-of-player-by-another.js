@@ -9,7 +9,10 @@ fromFile(CSVpath).
 then(deliveries => {
     
     let playerList = deliveries.reduce((acc,ele) => {
-        if(!ele.player_dismissed){
+        let bool = i.dismissal_kind === "caught" || i.dismissal_kind === "caught and bowled" ||
+                    i.dismissal_kind === "lbw" || i.dismissal_kind === "stumped" || 
+                    i.dismissal_kind === "run out" || i.dismissal_kind ==="hit wicket"
+        if(!bool){
             return acc
         }
         let playerout = ele.player_dismissed
