@@ -1,8 +1,7 @@
 const CSVtoJSON = require("csvtojson")
 const path = require("path")
 const fileSys = require("fs")
-const { match } = require("assert")
-const { log } = require("console")
+
 
 const CSVpath1 = path.join(__dirname, "../data/matches.csv")
 const CSVpath2 = path.join(__dirname, "../data/deliveries.csv")
